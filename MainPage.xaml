@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleCalc.MainPage"
+             xmlns:vm="using:SimpleCalc.ViewModel"
+             Shell.NavBarIsVisible="False"
+             Padding="5">
+
+    <Grid RowSpacing="5" ColumnSpacing="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.8*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
+            <Label Text="{Binding CalculationScreen}"
+                   FontSize="30"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+        </Border>
+
+        <Button Grid.Row="6" Grid.Column="0"
+                Text="0"
+                FontSize="Title"
+                Command="{Binding NumberCommand}"
+                CommandParameter="0"/>
+        <Button Grid.Row="5" Grid.Column="0"
+                Text="1"
+                FontSize="Title"
+                Command="{Binding NumberCommand}"
+                CommandParameter="1"/>
+        <Button Grid.Row="5" Grid.Column="1"
+                Text="2"
+                FontSize="Title"
+                Command="{Binding NumberCommand}"
+                CommandParameter="2"/>
+        <Button Grid.Row="5" Grid.Column="2"
+                Text="3"
+                FontSize="Title"
+                Command="{Binding NumberCommand}"
+                CommandParameter="3"/>
+        <Button Grid.Row="4" Grid.Column="0"
+                Text="4"
+                FontSize="Title"
+                Command="{Binding NumberCommand}"
+                CommandParameter="4"/>
+        <Button Grid.Row="4" Grid.Column="1"
+                Text="5"
+                FontSize="Title"
+                Command="{Binding NumberCommand}"
+                CommandParameter="5"/>
+        <Button Grid.Row="4" Grid.Column="2"
+                Text="6"
+                FontSize="Title"
+                Command="{Binding NumberCommand}"
+                CommandParameter="6"/>
+        <Button Grid.Row="3" Grid.Column="0"
+                Text="7"
+                FontSize="Title"
+                Command="{Binding NumberCommand}"
+                CommandParameter="7"/>
+        <Button Grid.Row="3" Grid.Column="1"
+                Text="8"
+                FontSize="Title"
+                Command="{Binding NumberCommand}"
+                CommandParameter="8"/>
+        <Button Grid.Row="3" Grid.Column="2"
+                Text="9"
+                FontSize="Title"
+                Command="{Binding NumberCommand}"
+                CommandParameter="9"/>
+        <Button Grid.Row="6" Grid.Column="1"
+                Text="."
+                FontSize="Title"
+                Command="{Binding PointCommand}"/>
+        <Button Grid.Row="6" Grid.Column="2"
+                Text="Del"
+                FontSize="Title"
+                Command="{Binding DeleteCommand}"/>
+        <Button Grid.Row="5" Grid.Column="3"
+                Text="+"
+                FontSize="30"
+                Command="{Binding OperatorCommand}"
+                CommandParameter="+"/>
+        <Button Grid.Row="4" Grid.Column="3"
+                Text="-"
+                FontSize="30"
+                Command="{Binding OperatorCommand}"
+                CommandParameter="-"/>
+        <Button Grid.Row="3" Grid.Column="3"
+                Text="×"
+                FontSize="30"
+                Command="{Binding OperatorCommand}"
+                CommandParameter="×"/>
+        <Button Grid.Row="2" Grid.Column="3"
+                Text="÷"
+                FontSize="30"
+                Command="{Binding OperatorCommand}"
+                CommandParameter="÷"/>
+        <Button Grid.Row="6" Grid.Column="3"
+                Text="="
+                FontSize="30"
+                Command="{Binding EqualCommand}"/>
+        <Button Grid.Row="2" Grid.Column="0"
+                Text="AC"
+                FontSize="Title"
+                Command="{Binding ClearCommand}"/>
+        <Button Grid.Row="2" Grid.Column="1"
+                Text="("
+                FontSize="30"
+                Command="{Binding LeftParenthesisCommand}"/>
+        <Button Grid.Row="2" Grid.Column="2"
+                Text=")"
+                FontSize="30"
+                Command="{Binding RightParenthesisCommand}"/>
+        <Button Grid.Row="1" Grid.Column="3"
+                Text="mod"
+                FontSize="30"
+                Command="{Binding OperatorCommand}"
+                CommandParameter="mod"/>
+        <Button Grid.Row="1" Grid.Column="2"
+                Text="^"
+                FontSize="30"
+                Command="{Binding OperatorCommand}"
+                CommandParameter="^"/>
+        <Button Grid.Row="1" Grid.Column="1"
+                Text="√"
+                FontSize="30"
+                Command="{Binding OperatorCommand}"
+                CommandParameter="√"/>
+    </Grid>
+
+</ContentPage>
